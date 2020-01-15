@@ -33,39 +33,21 @@ public class Main {
 		button2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("running script 2");
-				try {
-					String[] cmd = new String[] {"/bin/bash", "-c", "./button2script"};
-					Runtime.getRuntime().exec(cmd);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				button2();
 			}
 		});
 
 		button3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("running script 3");
-				try {
-					String[] cmd = new String[] {"/bin/bash", "-c", "./button3script"};
-					Runtime.getRuntime().exec(cmd);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				button3();
 			}
 		});
 
 		button4.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("running script 4");
-				try {
-					String[] cmd = new String[] {"/bin/bash", "-c", "./button4script"};
-					Runtime.getRuntime().exec(cmd);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				button4();
 			}
 		});
 
@@ -88,6 +70,36 @@ public class Main {
 		System.out.println("running script 1 ");
 		try {
 			String[] cmd = new String[] {"/bin/bash", "button1script"};
+			Runtime.getRuntime().exec(cmd);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+	
+	private static void button2() {
+		System.out.println("running script 2");
+		try {
+			String[] cmd = new String[] {"/bin/bash", "button2script"};
+			Runtime.getRuntime().exec(cmd);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+	
+	private static void button3() {
+		System.out.println("running script 3");
+		try {
+			String[] cmd = new String[] {"/bin/bash", "button3script"};
+			Runtime.getRuntime().exec(cmd);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+	
+	private static void button4() {
+		System.out.println("running script 4");
+		try {
+			String[] cmd = new String[] {"/bin/bash", "button4script"};
 			Runtime.getRuntime().exec(cmd);
 		} catch (IOException e1) {
 			e1.printStackTrace();
